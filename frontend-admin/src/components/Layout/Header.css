@@ -1,0 +1,159 @@
+.app-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  width: 100%;
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  height: 72px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-primary);
+  cursor: pointer;
+  white-space: nowrap;
+  margin-right: 56px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: opacity var(--transition-fast);
+  letter-spacing: -0.5px;
+}
+
+.logo:hover {
+  opacity: 0.7;
+}
+
+.logo .anticon {
+  font-size: 28px;
+  color: var(--primary-color);
+}
+
+.nav-menu {
+  flex: 1;
+  border: none !important;
+  background: transparent !important;
+  line-height: 70px !important;
+}
+
+.nav-menu .ant-menu-item {
+  padding: 0 24px !important;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-secondary) !important;
+  transition: color var(--transition-fast);
+  letter-spacing: -0.2px;
+}
+
+.nav-menu .ant-menu-item::after {
+  inset-inline: 24px !important;
+  transition: opacity 0.15s ease !important;
+  border-bottom-width: 3px !important;
+}
+
+.nav-menu .ant-menu-item:hover {
+  color: var(--text-primary) !important;
+}
+
+.nav-menu .ant-menu-item-selected {
+  color: var(--text-primary) !important;
+}
+
+.nav-menu .ant-menu-item-selected::after {
+  border-bottom-width: 3px !important;
+  border-bottom-color: var(--primary-color) !important;
+  inset-inline: 24px !important;
+  transition: none !important;
+}
+
+.header-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-info {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-secondary);
+}
+
+.user-info:hover {
+  background: var(--border-color);
+}
+
+.user-info .ant-avatar {
+  background: linear-gradient(135deg, var(--primary-color), #00c6ff);
+  font-weight: 700;
+}
+
+.username {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.login-btn {
+  height: 42px !important;
+  padding: 0 28px !important;
+  font-size: 14px !important;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu .ant-btn {
+  border: none !important;
+  box-shadow: none !important;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md) !important;
+  background: var(--bg-secondary) !important;
+}
+
+@media (max-width: 900px) {
+  .header-content {
+    padding: 0 20px;
+  }
+
+  .nav-menu {
+    display: none !important;
+  }
+
+  .mobile-menu {
+    display: block;
+    margin-left: auto;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+  .logo {
+    margin-right: 0;
+    font-size: 20px;
+  }
+}

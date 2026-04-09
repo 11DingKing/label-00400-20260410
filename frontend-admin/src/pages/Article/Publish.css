@@ -1,0 +1,113 @@
+.article-publish-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 32px;
+  min-height: calc(100vh - 72px - 180px);
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  margin-bottom: 48px;
+}
+
+.page-header h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+.page-header p {
+  font-size: 17px;
+  color: var(--text-secondary);
+}
+
+.publish-card {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.publish-card .ant-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.publish-card .ant-form-item-label > label {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.publish-card .ant-input {
+  height: 52px;
+  font-size: 15px;
+}
+
+.editor-wrapper {
+  margin-bottom: 32px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-wrapper .rich-text-editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-wrapper .rich-text-editor .ProseMirror {
+  flex: 1;
+  min-height: 300px;
+}
+
+.editor-label {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-primary);
+}
+
+.editor-label::before {
+  content: '*';
+  color: var(--error-color);
+}
+
+.form-actions {
+  display: flex;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 32px;
+}
+
+.form-actions .ant-btn {
+  height: 48px;
+  padding: 0 36px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .article-publish-page {
+    padding: 40px 20px;
+  }
+
+  .page-header h1 {
+    font-size: 28px;
+  }
+
+  .publish-card {
+    padding: 24px;
+  }
+}

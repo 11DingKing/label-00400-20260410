@@ -1,0 +1,129 @@
+.registration-page {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  position: relative;
+}
+
+.registration-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.registration-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(26, 26, 46, 0.85) 100%);
+}
+
+.registration-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+}
+
+.registration-card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl) !important;
+  box-shadow: var(--shadow-xl) !important;
+  overflow: hidden;
+}
+
+.registration-card-header {
+  background: linear-gradient(135deg, var(--primary-color), #00c6ff);
+  padding: 32px;
+  text-align: center;
+}
+
+.registration-card-header h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.registration-card-header p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.registration-card-body {
+  padding: 32px;
+}
+
+.registration-card .ant-form-item-label > label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.registration-card .ant-input,
+.registration-card .ant-select-selector {
+  height: 48px !important;
+  border-radius: var(--radius-md) !important;
+}
+
+.registration-card .ant-select-selection-item {
+  line-height: 46px !important;
+}
+
+.registration-card .ant-btn-primary {
+  height: 52px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: var(--radius-md) !important;
+}
+
+.registration-tips {
+  margin-top: 24px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+}
+
+.registration-tips h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.registration-tips ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.registration-tips li {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 576px) {
+  .registration-content {
+    padding: 32px 16px;
+  }
+
+  .registration-card-header {
+    padding: 24px;
+  }
+
+  .registration-card-body {
+    padding: 24px;
+  }
+}
